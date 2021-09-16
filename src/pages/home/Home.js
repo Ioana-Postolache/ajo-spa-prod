@@ -46,14 +46,14 @@ export default function Home() {
         varius, ut bibendum nisi dapibus. Praesent bibendum dignissim augue ut
         tempus. Vivamus consectetur euismod ipsum, at finibus nisi blandit nec.
       </p>
-      <div id="for-mbox">
-        <Target
-          data-mbox="ioana"
-          industry="IT"
-          country="Romania"
-          data-timeout="1000"
-        />
-      </div>
+      {/*<div id="for-mbox">*/}
+      {/*  <Target*/}
+      {/*    data-mbox="ioana"*/}
+      {/*    industry="IT"*/}
+      {/*    country="Romania"*/}
+      {/*    data-timeout="1000"*/}
+      {/*  />*/}
+      {/*</div>*/}
     </>
   );
 }
