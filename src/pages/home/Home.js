@@ -1,7 +1,7 @@
 import home from "../../resources/home.png";
-import createTargetComponent from "@adobe/target-react-component";
+// import createTargetComponent from "@adobe/target-react-component";
 import React from "react";
-const Target = createTargetComponent(React);
+// const Target = createTargetComponent(React);
 
 export default function Home() {
   return (
