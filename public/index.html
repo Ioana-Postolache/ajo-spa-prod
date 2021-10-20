@@ -55,10 +55,12 @@
         results.decisions.forEach(function(decision) {
           if (decision.scope === "ioana") {
             const targetedElement = document.getElementById("second-paragraph-users");
-            const newItem = document.createElement('div');
-            newItem.setAttribute("id", "ioana");
-            newItem.innerHTML = decision.items[0].data.content;
-            targetedElement.parentNode.replaceChild(newItem, targetedElement);
+            if(targetedElement){
+              const newItem = document.createElement('div');
+              newItem.setAttribute("id", "ioana");
+              newItem.innerHTML = decision.items[0].data.content;
+              targetedElement.parentNode.replaceChild(newItem, targetedElement);
+            }
           }
         });
       });
