@@ -57,6 +57,7 @@
             console.log(decision.content);
             const targetedElement = document.getElementById("second-paragraph-home");
             const newItem = document.createElement('div');
+            newItem.setAttribute("id", "ioana");
             newItem.innerHTML = decision.items[0].data.content;
             targetedElement.parentNode.replaceChild(newItem, targetedElement);
           }
