@@ -53,8 +53,10 @@
         ]
       }).then(function(results) {
         results.decisions.forEach(function(decision) {
-          if (decision.decisionScope === "ioana") {
-            console.log(decision.content)
+          if (decision.scope === "ioana") {
+            console.log(decision.content);
+            const targetedElement = document.getElementById("#second-paragraph-home");
+            targetedElement.parentNode.replaceChild(decision.content, targetedElement);
           }
         });
       });
