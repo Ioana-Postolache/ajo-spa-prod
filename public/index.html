@@ -55,7 +55,7 @@
         results.decisions.forEach(function(decision) {
           if (decision.scope === "ioana") {
             console.log(decision.content);
-            const targetedElement = document.getElementById("#second-paragraph-home");
+            const targetedElement = document.getElementById("second-paragraph-home");
             targetedElement.parentNode.replaceChild(decision.content, targetedElement);
           }
         });
