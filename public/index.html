@@ -36,26 +36,35 @@
     <!--/targetPageParams()-->
     <!--script src="%PUBLIC_URL%/scripts/at-taasqa1-spa.js"></script-->
     <script>
-      !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
-              []).push(o),n[o]=function(){var u=arguments;return new Promise(
-              function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
-      (window,["alloy"]);
+      !function (n, o) {
+        o.forEach(function (o) {
+          n[o] || ((n.__alloyNS = n.__alloyNS ||
+                  []).push(o), n[o] = function () {
+            var u = arguments;
+            return new Promise(
+                    function (i, l) {
+                      n[o].q.push([i, l, u])
+                    })
+          }, n[o].q = [])
+        })
+      }
+      (window, ["alloy"]);
 
       alloy("configure", {
         "edgeConfigId": "785579af-95a6-4688-8a3f-7e7c8b9e31c9:prod",
-        "orgId":"011B56B451AE49A90A490D4D@AdobeOrg"
+        "orgId": "011B56B451AE49A90A490D4D@AdobeOrg"
       });
 
-      alloy("sendEvent",{
+      alloy("sendEvent", {
         "renderDecisions": true,
-        "decisionScopes": [
+        "decisionScopes": ["__view__",
           "ioana"
         ]
-      }).then(function(results) {
-        results.decisions.forEach(function(decision) {
+      }).then(function (results) {
+        results.decisions.forEach(function (decision) {
           if (decision.scope === "ioana") {
             const targetedElement = document.getElementById("for-nvec");
-            if(targetedElement){
+            if (targetedElement) {
               const newItem = document.createElement('div');
               newItem.setAttribute("id", "ioana");
               newItem.innerHTML = decision.items[0].data.content;
